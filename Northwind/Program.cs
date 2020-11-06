@@ -136,6 +136,12 @@ namespace Northwind
 
                 using (var database = new northwindContext())
                 {
+                    //Enhance the application by displaying a list of all unique cities that customers already reside in as a prompt to the user before they enter their preferred city:
+                    IQueryable<string> distinctCities = database.Customers.Select(c => c.City).Distinct();
+                    WriteLine("**************************************");
+                    WriteLine($"{string.Join(",", distinctCities)}");
+
+                    //Create a console application that prompts the user for a city and then lists the company names for Northwind customers in that city:
                     WriteLine("**************************************");
                     Write("Enter the name of a city: ");
                     string input = ReadLine();
