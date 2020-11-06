@@ -14,7 +14,6 @@ namespace EntityFramework
                 using var context = new Entity_FrameworkContext();
                 var listEmp = context.Employees.ToList();
 
-
                 listEmp.ForEach(employee => Console.Write($"{employee.FirstName},{employee.LastName} \n"));
             }
             catch (Exception ex)
