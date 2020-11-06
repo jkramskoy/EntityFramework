@@ -1,6 +1,5 @@
 ﻿using System;
 using static System.Console;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Northwind.NorthwindData;
 using System.Collections.Generic;
